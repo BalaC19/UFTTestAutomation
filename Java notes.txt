@@ -1,0 +1,859 @@
+1) reverse a string.
+
+s="welcome"
+reverse string = emoclew
+
+
+2) String comparison
+
+== used for comparing objects
+equals() used for comparing values of objects
+
+equals() - recomended method to compare string.
+
+Immutable  - we cannot change
+Mutable  - we can change
+
+String  - immutable , canot change
+StringBuffer - mutable , can change
+StringBuilder -- mutable, can change
+
+Day-10
+---------
+
+Object oriented Programming 
+----------------
+class
+object
+polymorphism
+Encapsulation
+Inheritance
+Data Abstraction
+
+class is collection of attributtes(variables) and behavior(methods).
+
+Animal --> Dog, Elephant, Horse etc...
+Student  --> Kim, David, Scott etc....
+Employee ---> John, Smith, Mary etc...
+
+class
+---------
+1) class is collection of variables and methods
+2) class is logical entity/blue print
+3) will not occupy space in the memory.
+
+
+class Employee
+{
+variables
+methods
+}
+
+object is an instance of a class.
+
+object
+-------------
+1) object is an instance of a class/ object will be created by using class.
+2) object is physical entity
+3) occupy space in memory
+4) we can create multiple objects for single class.
+
+Employee emp=new Employee();
+
+
+String s=new String("welcome");
+
+s.lenght() --- 7
+
+
+String s= "welcome to java"
+
+s.replaceAll("\\s","")   --->  welcometojava
+
+
+
+
+
+Day-11
+----------
+methods
+
+block or group of statements which will perform certain task.
+we have to call the method though object.
+
+1) No params  	No return value
+2) No params	Return value
+3) Takes params	No return value
+4) Takes params  Retuns value
+
+String s="welcome";
+
+int l=s.lenght();   // no params, return type - int
+String sub=s.substring(2,5)    // takes 2 int params,   return type- String
+
+
+How many ways we can store data into varaibles
+-------------------
+1) by using object reference varaible
+2) method
+3) constructor
+
+Method:
+-----------------
+1) Method name can be anything
+2) Method may or may not return a value
+3) If method is not returnign any value then specify void
+4) Method can take parameters/arguments
+5) We have to invoke/call methods explicitely through object
+6) used for specifying logic
+
+Constructor
+--------
+1) Constructor name should be same as class name.
+2) Constructor will never return a value ( not even void)
+3) We dont specify the void
+4) Constructor can take parameters/arguments
+5) Constructor automatically invoked at the time of object creation.
+6) used for initilizing the values of the variables.
+
+
+Day-12
+--------
+
+Call by value
+Call by reference
+
+Polymorphism - one thing can have many forms
+
+Shape - rectangle, triangle, circle etc...
+water -- vapour, ice burge
+
+overloading
+---
+we can achive polymorphism using overloading.
+
+
+class X
+{
+void m1()
+void m1()
+}
+
+
+4 rules are applicable
+----
+1) Method names should be same
+2) number of parameters should be different
+3) Data type of parameters should be different
+4) Order of parameters should be different
+
+
+Can we pass parameters to main method?  Yes
+
+Can we overload main method?  Yesy
+
+public static void main(String args[])
+{
+
+}
+
+
+
+
+
+
+
+Day-13
+-------
+this keyword
+----
+
+types of varaibles
+------------------
+Class variables/Instance varaibles
+Local variables
+
+
+this keyword represents class name.
+
+Encapsulation
+---------
+1) All variables should be private
+2) for every variable there should be 2 methods( get & Set)
+3) varaibles can be operated only through methods.
+
+setters and getters
+
+
+static keyword
+----
+1) static methods can access static stuff directly ( without object).
+2) static methods can access non-static stuff through object.
+3) non-static methods can access everything directly.
+
+
+System.out.println("welcome")
+
+
+class Test
+{
+static String s="welcome";
+}
+
+Test.s.lenght()
+
+
+
+class System
+{
+    static PrintStream out;
+}
+
+
+System.out.print()
+System.out.println()
+
+
+
+Day-14
+-------
+Inheritance
+----------
+Aquiring all the properties(Variables) & behaviour(methods) from one class to another class is called inheritance.
+
+Objective
+---------
+1) re-usability
+2) Avoid duplication
+
+types
+-----------
+1) single
+2) multi level
+3) hierarchy
+4) multiple 
+
+
+public static void main(String args[])
+{
+
+}
+
+public - access modifier
+static - directly called by JVM ( without object)
+void - no returned value
+String args[] --- String type array
+
+
+public static void main(String a[])    // valid
+{
+}
+
+
+public static void main(String []a)   //valid
+{
+}
+
+void main(String args[]) public static   // invalid
+{
+}
+
+public static void main(int a[]) //not valid
+{
+}
+
+static public void main(String args[])   //valid
+{
+}
+
+static void public main(String args[])   //in valid
+{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data abstraction
+--------------
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+abstract class
+interface
+
+Interface
+-----
+1) An interface is a blue print of class.
+2) Interface contains final & Static variables.
+3) Interface contains abstract methods.( also allowed default methods & Static methods from java8 onwards)
+4) An abstract method is a method contains signature but not body(Un-implemented method).
+5) Methods in interface are public.
+6) Interface supports the functionality of multiple inheritance.
+7) We can define interface with interface keyword.
+8) A class extends another class, an interface extends another interface but a class implements an interface.
+9) We can create Object reference for Interface but we cannot instantiate interface.
+
+
+interface I
+{
+varaibles
+methods
+}
+
+
+void m()
+{
+body
+}
+
+void m();
+
+
+
+public
+protected
+default
+private
+
+Day-17
+---------
+Wrapper classes
+--------------
+
+int a[]=int a[5]
+
+ArrayList <Integer> ar=new ArrayList<Integer>()
+
+ar[0]=100;
+
+
+int  --- Integer
+float  --- Float
+double --- Double
+char -- Character
+boolean --- Boolean
+
+The wrapper class - Converts primitive into object and object into primitive.
+
+Auto boxing  ( Primitive --> Object )
+Un boxing    ( Object --> Primitive)
+
+
+int x=100;
+double d=10.5;
+
+
+Integer x=100;
+Double d=10.5
+String s="welcome"
+
+
+String s1="welcome";   // cannot convert to number
+
+String s1="150";   // can convert to number
+String s2="160"    // can cnvert to number
+
+Scenario 1:  String ---> int, double, bool, char (not possible)
+Scenario 2:  int, double, bool, char ----> String
+
+
+Packages
+-------
+built-in packages
+user defined packages
+
+sub packages
+
+Access modifiers
+---------
+public - -directly access all variables & methods everywhere
+protected - accessible outside of package through inheritance
+default - only within the package
+private -  access only within the class
+
+
+Day-19
+-------
+Exception handling
+---------------
+Exception is an event which will cause program termination.
+
+Errors
+----
+1) Syntax
+2) Logical
+
+Types of exceptions
+-------
+1) Checked exceptions
+The exceptions which are identified by java compiler.
+	Ex: InteruptedException
+     		FileNotFound
+		IOException etc...
+
+2) Un-checked exceptions
+
+The exceptions which are not identified by java compiler.
+Ex:
+		ArithmeticException
+		NullPointerException
+		ArrayIndexOutOfBoundsException etc...
+			etc...
+
+try
+{
+
+}
+catch(Exception name)
+{
+
+}
+finally
+{
+
+}
+
+
+If you do not knw what type of exception comes then you have 2 solutions to handle.
+
+1) multiple catch blocks
+2) by specifying Exception class in catch.
+
+finally block
+-------------
+case1: Exception occured, catch block handled ---> finally block will execute
+case2: Exception occured, catch block NOT handled --> finally block will execute
+case3: Exception does not occured, catch block ignored ----> finally block will execute
+
+try
+{
+open connection with DB.
+}
+catch()
+{
+Handle exception
+}
+finally
+{
+close connection
+}
+
+
+checked exceptions can be handled in 2 ways
+----
+using try..catch
+throws
+
+throw
+
+
+
+
+Day 20
+------
+Collections
+--------
+collection - To represent group of elements/objects/data into single entity
+
+"Collection" is an interface available in java.util
+
+ArrayList - is class which is implemented List interface
+-----------------------------
+1) Heterogenious data - allowed
+2) Insertion order- preserved(Index)
+3) Duplicate elements -- allowed
+4) multiple nulls -- allowed
+
+
+String m1()
+{
+}
+String x=m1()
+
+
+Iterator iterator()
+{
+----
+}
+
+
+Iterator it=mylist.iterator();
+
+
+HashSet   - a class implemented Set interface
+---------
+1) Heterogenios data ---> allowed
+2) Insertion order  --> Not preserved (Index not supported)
+3) Duplicate elements --> Not Allowed
+4) Multiple nulls Not allowed/ only single null is allowed
+
+
+HashMap - a class implemented Map interface
+--------------
+Data can be stored in the form of key, value pairs.
+Key is unique. But we can have duplicate values.
+Insertion order not preserved(Index not followed)
+
+Collections videos: https://www.youtube.com/playlist?list=PLUDwpEzHYYLu9-xrx5ykNH8wmN1C1qClk
+
+
+
+Assignment
+-------------
+1) Create Employee class which contains id and name.
+2) Create Group class which contains groupID and employees list.
+3) sort employee names.
+
+
+
+
+multiple inheritance using interface
+
+Day-21
+--------
+Selenium WebDriver
+-----------------
+
+What is selenium webdriver?
+------
+1) WebDriver is one of the component in selenium.
+2) WebDriver is a java interface.
+3) WebDriver is an API( Application Programming interface)
+
+
+
+WebDriver (I)-- RemoteWebDriver (C)---->ChromeDriver , FirefoxDriver, EdgeDriver etc..
+
+Environment setup
+--------------------
+1) Downloading jars files and attaching them to Java project.(Manually) - Not recomended
+------------
+-> created new java project
+-> downloaded webdriver jars(.zip) and extracted.
+-> attach jars to java project.
+
+
+2) Creating Maven project   ( Recomended )
+
+-->Created a new Maven project in eclipse
+--> addedd webdriver dependecy in pom.xml--> updated
+
+
+
+Stable: 4.18.1 (February 19, 2024)
+
+
+pom.xml ---> dependencies
+
+https://mvnrepository.com/
+web driver dependecy link: https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+
+
+Assignment
+--------------
+1) Launch browser (chrome)
+2) Open URL  https://demo.nopcommerce.com/
+3) Validate title should be   "nopCommerce demo store"
+4) close page
+
+**Note: 
+Opera browser supported till selenium 4.1.0.
+Above 4.1.0 , Opera do not support.
+
+
+
+
+Day-22
+---------
+id
+name
+linkText
+partialLinkText
+
+TagName
+classname
+
+CSS selector
+XPath
+
+
+<input type="text" name="search" value="" placeholder="Search" class="form-control form-control-lg">
+
+input - tagname
+type, name, value, placeholder ---> attributes/properties
+
+name="search"
+name--> attribute
+search ---> value
+
+
+findElement(By.name("search")) ----> WebElement
+
+WebElement searchBox=driver.findElement(By.name("search"));
+
+
+Ctrl +Shift+O  --> importing packages.
+
+
+String s="welcome";
+s.lenght()
+
+"welcome".lenght();
+
+
+
+Employee emp=new Employee();
+emp.display();
+
+new Employee().display();
+
+
+<a href="http://www.xyz.com">Click</a>
+
+booklets
+
+By.partialLinkText("lets")
+
+
+findElement(loc) Vs findElements(loc)
+----------------------------
+
+Scenario1: Locator is smatching with single web element
+
+findElement(loc) ----> single web element ---> WebElement
+findElements(loc) ---> single web element ----> List<WebElement>
+
+Sceanrio2 : Locator is matching with multiple web elements
+
+findElement(loc) ---> single web element --> WebElement
+findElements(loc) ---> multiple web elements ---> List<WebElement>
+
+Scenario3: Locator is not matching with any element.
+
+findElement(loc) ----> NosuchElementException
+findElements(loc)----->will not throw any exception. Returns 0 
+
+
+Assignment
+---------------
+Open application "https://www.demoblaze.com/index.html"
+
+1) Total number of links 
+2) Total number of images
+3) Click on Any product link using linkText /partialLinkText
+
+Day-26
+---------
+1) get methods
+2) conditional methods
+3) browser methods 
+4) navigational methods
+5) wait methods
+
+
+get methods - we can access these methods through webdriver instance
+----------
+get(url) - opens the url on the browser
+getTitle() - returns title of the page
+getCurrentUrl() - retuns URL of the page
+getPageSource()- returns source code of the page
+getWindowHandle() - returns ID of the single Browser window
+getWindowHandles() - retuns ID's of the multiple browser windows
+
+conditional methods - access these commands thorugh WebElement
+-----------------------
+retuns boolean value( true/false)
+
+isDisplayed() - we can check display status of the element
+isEnabled() - we can check enable/disable status of the element/operational element
+isSelected() - we can use to check the element is selected or not
+
+browser methods
+---------
+close() - close single browser
+quit() - close multiple browsers
+
+
+Assignment
+---------
+https://testautomationpractice.blogspot.com/
+
+
+
+
+
+
+
+Day-24
+-------
+Check boxes 
+Dropdowns
+----------
+1) Drop down having select tag in DOM.
+2) DropDown not having select tag in DOM ( input/div) - Bootstrap dropdown
+3) Auto Suggest drop down ( Dynamic)
+
+Select class
+
+
+Day-47
+------
+Page Object model
+-----------------
+
+Test case
+----
+locators
+test methods ----code---validations+Actions
+
+2 appraoches to create page object classes
+---------------------------
+1) without using PageFactory
+2) using PageFactory
+-----------------
+
+
+WebElement usertxt=driver.findElement(By.xpath("//input[@placeholder='Username']");
+
+
+By loc=By.xpath("//input[@placeholder='Username'];
+driver.findElement(loc).sendKeys("xyz")
+
+
+Cucumber
+----------
+
+TDD - Test Driven Development
+
+Ex: JUnit/TestNG (for Java), NUnit (for .NET), PyTest (for Python), Jasmine (for JavaScript)
+
+
+BDD - Behavioral Driven Development
+
+Ex:	Cucumber (supports multiple languages like Java, Ruby, JavaScript, etc.)
+	SpecFlow (for .NET)
+	Behave (for Python)
+	JBehave (for Java)
+
+team
+----
+stake holders/customer (non-tech)
+product manager (non-tech)
+project manager - (non-tech)
+tester - tech
+developer - tech
+scrum master (non-tech)
+
+BDD, or Behavior-Driven Development, emphasizes collaboration between technical and non-technical stakeholders 
+through the use of a common language to describe the behavior of a system. 
+It focuses on writing tests in a human-readable format, typically using a "given-when-then" structure, which helps clarify requirements and expectations.
+
+
+Cucumber
+-----------
+1) Feature file
+2) step definitions file
+3) test runner file
+
+Feature file contains scenarios & Steps.
+
+Gherkin - language contains keywords..
+
+Scenario
+Given
+When
+Then
+And
+
+
+Pre-condition  - Given
+Actions  - When
+Validations  - Then
+
+
+Login.feature
+------------
+Feature : User login
+	Scenario: Succesful login
+		Given the user opens application
+		And  the user navigate to login page
+		When the user entered valid user name and valid password
+		And the user clicked on submit button.
+		Then the user should see My account page.
+		And the user name should be displayed on my account page
+
+
+Step definition file contains methods which are represent to steps in feature file
+
+testRunner class  ---> feature file, steps, report etc...
+
+
+
+Cucumber project setup
+--------------
+1) Install cucumber eclipse plugin ( From eclipse market place)
+2) Create Maven project
+3) Update pom.xml with required dependencies.
+
+
+
+Cucumber framework
+-------------
+data driven testing
+--
+-> Scenario Outline Examples
+
+Data driven testing using Excel sheet
+-----
+Test data
+Scenario Outline
+DataReader
+
+passing multiple parameters nto one step using data table concept...
+
+Run only failure screnarios..
+
+run scenarios on grid..
+
+run scenarios through pom.xml
+
+run scenarios through maven command prompt
+
+Cucumber Framework
+-------------------
+1) Create Maven project -- Update pom.xml
+2) Folder structure
+3) Page Object classes, Base class, Hooks
+4) Login feature file
+5) Login steps
+6) Test Runner - options
+7) generate logs
+8) cucumber reports
+9)Extent reports
+10) tagging  (Grouping)
+
+
+s1 - @sanity
+s2 - @refression
+s3- @sanity  @regression
+
+tags="@sanity"   ---->s1,s3
+
+tags="@sanity and not @regression"   ---->s1
+
+tags="@sanity or @regression" --->s1, s2, s3
+
+tags="@sanity and @regression"  ---> s3
+
+
+
